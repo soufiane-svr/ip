@@ -19,7 +19,7 @@ const UserModel = require('./models/Users')
 
 
 app.get('/users',async (req,res)=>{
-    const user =  await UserModel.find().maxTimeMS(30000);
+    const user =  await UserModel.find().maxTimeMS(100000);
     res.json(user)
 })
 
